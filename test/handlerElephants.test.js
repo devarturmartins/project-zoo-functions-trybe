@@ -25,4 +25,10 @@ describe('Testes da função HandlerElephants', () => {
   it('Retorna um array com a relação de dias em que é possível visitar os elefantes', () => {
     expect(handlerElephants('availability')).toEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
   });
+  it('Passando por parametro com um objeto vazio', () => {
+    expect(handlerElephants({})).toEqual('Parâmetro inválido, é necessário uma string');
+  });
+  it('Passando uma string que não completa uma funcionalidade', () => {
+    expect(handlerElephants('abcsansdakdad')).toEqual('null');
+  });
 });
