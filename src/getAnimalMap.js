@@ -45,16 +45,16 @@ function getAnimalMap(options) {
   if (!options) return semParam();
   if (options.includeNames) {
     const newObj = {
-      NE: objCompleto('NE', options.sex, options.sort),
-      NW: objCompleto('NW', options.sex, options.sort),
-      SE: objCompleto('SE', options.sex, options.sort),
-      SW: objCompleto('SW', options.sex, options.sort),
+      NE: objCompleto('NE', options.sex, options.sorted),
+      NW: objCompleto('NW', options.sex, options.sorted),
+      SE: objCompleto('SE', options.sex, options.sorted),
+      SW: objCompleto('SW', options.sex, options.sorted),
     };
     return newObj;
   }
   return semParam();
 }
 
-// console.log(sendNames('lions'));
-//  console.log(objCompleto('NE', 'male')[0].lions);
+// console.log(sendLocation('NE'));
+// console.log(getAnimalMap({ includeNames: true, sex: 'male', sort: }));
 module.exports = getAnimalMap;
